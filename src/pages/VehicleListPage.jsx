@@ -24,7 +24,7 @@ export default function VehiclesListPage() {
   useEffect(fetchVehicles, []);
 
   return (
-    <div className="container">
+    <div className="container mb-4">
       <h1 className="my-4">I Nostri Veicoli</h1>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {vehicles.map((vehicle) => (

@@ -4,7 +4,7 @@ import GlobalContext from "../contexts/GlobalContext";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function VehicleDetailCard() {
+export default function VehicleDetailPage() {
     const { id } = useParams();
     const [vehicle, setVehicle] = useState({}); // inizialmente null
     const { setIsLoading } = useContext(GlobalContext);
