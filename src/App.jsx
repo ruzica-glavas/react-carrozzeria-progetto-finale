@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DefualtLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import VehicleListPage from "./pages/VehicleListPage";
-import VehicleDetail from "./pages/VehicleDetail";
+import VehicleDetailCard from "./pages/VehicleDetailCard";
 
 export default function App() {
 
@@ -17,7 +17,7 @@ export default function App() {
                 <Route element={<DefualtLayout/>}>
                     <Route index path="/" element={<HomePage/>}/>
                     <Route path="/vehicles" element={<VehicleListPage/>}></Route>
-                    <Route path="/vehicles/:id" element={<VehicleDetail/>}/>
+                    <Route path="/vehicles/:id" element={<VehicleDetailCard/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
