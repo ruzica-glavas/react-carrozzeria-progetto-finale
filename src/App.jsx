@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import GlobalContext from "./contexts/GlobalContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DefualtLayout from "./layouts/DefaultLayout";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
 
@@ -13,7 +14,8 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route element={<DefualtLayout/>}>
-                    <Route index path="/"/>
+                    <Route index path="/" element={<HomePage/>}/>
+                    <Route path="/vehicles"></Route>
                     <Route path="/vehicles/:id"/>
                 </Route>
             </Routes>
