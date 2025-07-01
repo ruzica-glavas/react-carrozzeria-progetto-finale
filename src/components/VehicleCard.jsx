@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function VehicleCard(props){
     // const isDetail = props.isDetail || false;
-    const{id, brand, model, plateNumber, engine, color, year, vin, photo, ownerName, ownerPhone, description, maintenances} = props.vehicle;    
+    const{id, brand, model, plateNumber, photo} = props.vehicle;    
     
     
     return(
