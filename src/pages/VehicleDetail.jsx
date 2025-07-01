@@ -1,44 +1,3 @@
-// import { useParams } from "react-router-dom"
-// import { useContext, useEffect, useState } from "react";
-// import GlobalContext from "../contexts/GlobalContext";
-// import axios from "axios";
-// //import VehicleCard from "../components/VehicleCard";
-
-// export default function VehicleDetail(){
-
-//     const{brand, model, plateNumber, engine, color, year, vin, photo, ownerName, ownerPhone, description, maintenances} = vehicle; 
-
-//     const {id} = useParams();
-//     const [vehicle, setVehicle]=useState({});
-//     const {setIsLoading} = useContext(GlobalContext);
-
-//     const fetchVehicle = () =>{
-//         setIsLoading(true)
-//         axios.get(`${import.meta.env.VITE_API_URL}/${id}`)
-//         .then(response=>{
-//             const {data} = response
-//             setVehicle(data)
-//         })
-//         .catch(error=>console.log(error))
-//         .then(()=>{setIsLoading(false)})
-//     }
-
-//     useEffect(fetchVehicle, [])
-
-//     return (
-//         <>
-//         <div className="card h-100">
-//             <h2>{brand} {model}</h2>
-//             <img src={photo} className="card-img-top" alt={`Foto ${brand} ${model}`} />
-//             <div className="card-body">
-//             <h5 className="card-title">{brand} {model}</h5>
-//             <h6 className="card-text">Targa: {plateNumber}</h6>
-//             </div>
-//         </div>
-//         </>
-//     )
-// }
-
 import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react";
 import GlobalContext from "../contexts/GlobalContext";
@@ -57,7 +16,7 @@ export default function VehicleDetail() {
                 setVehicle(response.data);
             })
             .catch(error => console.log(error))
-            .finally(() => setIsLoading(false));
+            .then(() => setIsLoading(false));
     }, [id]);
 
     if (!vehicle) {
@@ -108,7 +67,6 @@ export default function VehicleDetail() {
 
           </div>
         </div>
-        {/* <Link to={`/vehicles`}>Schiaccia</Link> */}
     </> 
     );
 }
