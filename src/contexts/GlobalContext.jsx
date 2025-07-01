@@ -1,4 +1,5 @@
+import { createContext } from "react";
 
-export default function GlobalContext() {
+const GlobalContext = createContext();
 
-}
+export default GlobalContext;
