@@ -29,6 +29,7 @@ export default function VehicleDetailPage() {
     <>
         <div className="container my-4">
             <h1 className="title-detail-page text-center">{brand} {model}</h1>
+            <h3 className="title-detail-page text-center">{description}</h3>
             <div className="card mx-auto" style={{ maxWidth: "600px" }}>
                 <img src={photo} className="card-img-top" alt={`Foto ${brand} ${model}`} />
                 <div className="card-body">
@@ -39,18 +40,17 @@ export default function VehicleDetailPage() {
                     <p><strong>Anno:</strong> {year}</p>
                     <p><strong>VIN:</strong> {vin}</p>
                     <p><strong>Proprietario:</strong> {ownerName} - {ownerPhone}</p>
-                    <p><strong>Descrizione:</strong> {description}</p>
                 </div>
 
                 {maintenances && maintenances.length > 0 && (
                     <div className="mt-4">
                         <h5>Storico Manutenzioni</h5>
                         <ul className="list-group">
-                        {maintenances.map((m) => (
-                            <li key={m.id} className="list-group-item">
-                            <strong>{m.description}</strong><br />
-                            Dal: {m.beginDate} - Al: {m.endDate}<br />
-                            Prezzo: €{m.price}
+                        {maintenances.map((maintenance) => (
+                            <li key={maintenance.id} className="list-group-item">
+                            <strong>{maintenance.description}</strong><br />
+                            Dal: {maintenance.beginDate} - Al: {maintenance.endDate}<br />
+                            Prezzo: €{maintenance.price}
                             </li>
                         ))}
                         </ul>
@@ -62,7 +62,7 @@ export default function VehicleDetailPage() {
         <div className="card-footer text-center">
           <div className="d-flex justify-content-center gap-2 my-2">
             <Link to={`/vehicles`} className="btn btn-outline-danger">
-              Back
+              Go Back
             </Link>
          
           </div>
