@@ -28,6 +28,7 @@ export default function VehicleDetailPage() {
     return (
     <>
         <div className="container my-4">
+            <h1 className="title-detail-page text-center">{brand} {model}</h1>
             <div className="card mx-auto" style={{ maxWidth: "600px" }}>
                 <img src={photo} className="card-img-top" alt={`Foto ${brand} ${model}`} />
                 <div className="card-body">
@@ -61,10 +62,9 @@ export default function VehicleDetailPage() {
         <div className="card-footer text-center">
           <div className="d-flex justify-content-center gap-2 my-2">
             <Link to={`/vehicles`} className="btn btn-outline-danger">
-              Torna indietro
+              Back
             </Link>
-         {/* }  */}
-
+         
           </div>
         </div>
     </> 

@@ -2,7 +2,7 @@
 export default function HomePage(){
     return(
         <>
-                <div class="container">
+        <div class="container">
         <h1>Benvenuti nella nostra Carrozzeria</h1>
         <p>
             La nostra carrozzeria è specializzata nella <strong>riparazione di veicoli di ogni marca e modello</strong>,

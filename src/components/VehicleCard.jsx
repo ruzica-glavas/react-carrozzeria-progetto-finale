@@ -7,8 +7,8 @@ export default function VehicleCard(props){
     
     return(
         <>
-    
-      <div className="card h-100">
+    <div>
+      <div className="card">
          <h2>{brand} {model}</h2>
         <img src={photo} className="card-img-top" alt={`Foto ${brand} ${model}`} />
         <div className="card-body">
@@ -16,30 +16,14 @@ export default function VehicleCard(props){
           <h6 className="card-text">Targa: {plateNumber}</h6>
         </div>
 
-         {/* {isDetail ?
-                <div className="card-body detail">
-                    <p>{engine}</p>
-                    <p>{color}</p>
-                    <p>{year}</p>
-                    <p>{vin}</p>
-                    <p>{ownerName}</p>
-                    <p>{ownerPhone}</p>
-                    <p>{description}</p>
-                </div>: ""
-         }  */}
-
-
         <div className="card-footer text-center">
           <div className="d-flex justify-content-center gap-2 my-2">
-            {/* {!isDetail &&  */}
             <Link to={`/vehicles/${id}`} className="btn btn-outline-primary">
-              Dettaglio
+              Details
             </Link>
-         {/* }  */}
-
           </div>
         </div>
-   
+      </div>
     </div>
         </>
     )
